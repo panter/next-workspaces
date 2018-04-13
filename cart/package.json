@@ -13,12 +13,15 @@
   "scripts": {
     "dev": "next",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "analyze": "BUNDLE_ANALYZE=both yarn build",
+    "deploy": "now --forward-npm --regions bru"
   },
   "devDependencies": {
     "@types/next": "^2.4.9",
     "@types/react": "^16.3.10",
     "@types/react-dom": "^16.0.5",
+    "@zeit/next-bundle-analyzer": "^0.1.1",
     "ts-loader": "3.3.1",
     "typescript": "^2.8.1"
   }
