@@ -2,8 +2,9 @@
 // https://github.com/zeit/next.js/pull/3732/files
 
 const webpack = require("webpack");
-const withTypescript = require("./withTypescript");
+// const withTypescript = require("./withTypescript");
 const withBundleAnalyzer = require("@zeit/next-bundle-analyzer");
+const withTypescript = require("@zeit/next-typescript");
 const { BundleAnalyzerPlugin } = require("webpack-bundle-analyzer");
 
 // Update these to match your package scope name.
@@ -13,7 +14,7 @@ const externalNodeModulesRegExp = /node_modules(?!\/@tomaswitek(?!.*node_modules
 module.exports = withBundleAnalyzer(
   withTypescript(
     {
-      webpack: (config, { dev, isServer, defaultLoaders, ...options }) => {
+      webpack: (config, { dev, isServer, defaultLoaders, dir }) => {
         config.resolve.symlinks = false;
         config.externals = config.externals.map(external => {
           if (typeof external !== "function") return external;
@@ -25,6 +26,30 @@ module.exports = withBundleAnalyzer(
           loader: defaultLoaders.babel,
           include: [internalNodeModulesRegExp]
         });
+
+        config.module.rules = config.module.rules.map(
+          r =>
+            String(r.test) === String(/\.(ts|tsx)$/)
+              ? {
+                  test: /\.(ts|tsx)$/,
+                  include: [dir, internalNodeModulesRegExp],
+                  exclude: externalNodeModulesRegExp,
+                  use: [
+                    defaultLoaders.babel,
+                    {
+                      loader: "ts-loader",
+                      options: Object.assign(
+                        {},
+                        {
+                          transpileOnly: true
+                        },
+                        config.typescriptLoaderOptions
+                      )
+                    }
+                  ]
+                }
+              : r
+        );
 
         return config;
       },
