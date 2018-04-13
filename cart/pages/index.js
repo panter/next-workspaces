@@ -4,7 +4,8 @@ import { Header } from "@panter/core";
 const index = () => {
   return (
     <div>
-      <Header />FUckl
+      <Header />
+      Cart App
     </div>
   );
 };
