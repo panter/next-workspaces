@@ -2,12 +2,13 @@
 // https://github.com/zeit/next.js/pull/3732/files
 
 const webpack = require("webpack");
+const withTypescript = require("@zeit/next-typescript");
 
 // Update these to match your package scope name.
 const internalNodeModulesRegExp = /@panter(?!.*node_modules)/;
 const externalNodeModulesRegExp = /node_modules(?!\/@panter(?!.*node_modules))/;
 
-module.exports = {
+module.exports = withTypescript({
   webpack: (config, { dev, isServer, defaultLoaders }) => {
     config.resolve.symlinks = false;
     config.externals = config.externals.map(external => {
@@ -27,4 +28,4 @@ module.exports = {
     config.watchOptions.ignored = ignored;
     return config;
   }
-};
+});
