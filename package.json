@@ -1,0 +1,13 @@
+{
+  "name": "next-workspaces",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "private": true,
+  "workspaces": ["*"],
+  "scripts": {
+    "start": "next",
+    "build": "next build",
+    "server": "next start"
+  }
+}
