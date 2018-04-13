@@ -7,8 +7,8 @@ const withBundleAnalyzer = require("@zeit/next-bundle-analyzer");
 const { BundleAnalyzerPlugin } = require("webpack-bundle-analyzer");
 
 // Update these to match your package scope name.
-const internalNodeModulesRegExp = /@panter(?!.*node_modules)/;
-const externalNodeModulesRegExp = /node_modules(?!\/@panter(?!.*node_modules))/;
+const internalNodeModulesRegExp = /@tomaswitek(?!.*node_modules)/;
+const externalNodeModulesRegExp = /node_modules(?!\/@tomaswitek(?!.*node_modules))/;
 
 module.exports = withBundleAnalyzer(
   withTypescript(

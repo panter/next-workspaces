@@ -1,9 +1,9 @@
 import React from "react";
-import { Components } from "@panter/core";
+import { Components } from "@tomaswitek/core";
 
 const { Header, Footer } = Components;
 // FYI you can also use separate import
-//import Header from "@panter/core/components/Header";
+//import Header from "@tomaswitek/core/components/Header";
 
 const index = () => {
   return (
