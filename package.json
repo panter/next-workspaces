@@ -4,10 +4,5 @@
   "main": "index.js",
   "license": "MIT",
   "private": true,
-  "workspaces": ["*"],
-  "scripts": {
-    "start": "next",
-    "build": "next build",
-    "server": "next start"
-  }
+  "workspaces": ["*"]
 }
