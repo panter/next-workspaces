@@ -1,16 +1,22 @@
 import React from "react";
+import Link from "next/link";
 
 const Logo = () => {
   return (
     <div>
-      Shop
+      <Link href="/">
+        <a>Shop</a>
+      </Link>
       <style jsx>{`
         div {
+          text-align: center;
+        }
+        a {
           color: white;
           text-transform: uppercase;
+          text-decoration: none;
           font-weight: bold;
           font-size: 40px;
-          text-align: center;
         }
       `}</style>
     </div>

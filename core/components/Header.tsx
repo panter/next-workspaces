@@ -1,37 +1,33 @@
 import React from "react";
 import Logo from "./Logo";
+import Link from "next/link";
+import slugify from "../utils/slugify";
+
+const links = [
+  "Sale",
+  "Female",
+  "Male",
+  "Home & Living",
+  "Children",
+  "Beauty",
+  "Wine & drinks",
+  "Gifts"
+];
 
 const Header = () => (
   <div>
     <Logo />
     <ul>
-      <li>
-        <a>Sale</a>
-      </li>
-      <li>
-        <a>Female</a>
-      </li>
-      <li>
-        <a>Male</a>
-      </li>
-      <li>
-        <a>Home & Living</a>
-      </li>
-      <li>
-        <a>Children</a>
-      </li>
-      <li>
-        <a>Beauty</a>
-      </li>
-      <li>
-        <a>Delicatessa</a>
-      </li>
-      <li>
-        <a>Wine & drinks</a>
-      </li>
-      <li>
-        <a>Gifts</a>
-      </li>
+      {links.map((link, index) => (
+        <li key={index}>
+          <Link
+            href={`/category?name=${encodeURIComponent(link)}`}
+            as={`/category/${slugify(link)}`}
+          >
+            <a>{link}</a>
+          </Link>
+        </li>
+      ))}
     </ul>
 
     <style jsx>{`
@@ -48,8 +44,12 @@ const Header = () => (
       }
       li {
         list-style: none;
-        text-transform: uppercase;
         padding: 10px;
+      }
+      li a {
+        color: white;
+        text-transform: uppercase;
+        text-decoration: none;
       }
       li:hover {
         text-decoration: underline;

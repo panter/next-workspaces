@@ -15,7 +15,7 @@ const Layout = ({ children }) => {
 
       <style jsx>{`
         .layout {
-          padding: 24px 48px;
+          padding: 48px;
         }
       `}</style>
     </div>

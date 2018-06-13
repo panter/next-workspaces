@@ -1,6 +1,6 @@
 import React from "react";
 import Layout from "@panter/core/components/Layout";
-import Title from "../components/Title";
+import Title from "@panter/core/components/Title";
 import Cart from "../components/Cart";
 
 const index = () => {
