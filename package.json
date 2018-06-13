@@ -4,5 +4,16 @@
   "main": "index.js",
   "license": "MIT",
   "private": true,
-  "workspaces": ["*"]
+  "workspaces": [
+    "*"
+  ],
+  "scripts": {
+    "proxy": "micro-proxy -r proxy.json",
+    "build": "cd ./cart && next build && cd ../catalog && next build",
+    "start": "concurrently 'cd ./cart && yarn start' 'cd ./catalog && yarn start' 'yarn proxy'"
+  },
+  "devDependencies": {
+    "concurrently": "^3.5.1",
+    "micro-proxy": "^1.1.0"
+  }
 }

@@ -1,7 +1,6 @@
 import React from "react";
 import Logo from "./Logo";
 import Link from "next/link";
-import slugify from "../utils/slugify";
 
 const links = [
   "Sale",
@@ -20,10 +19,7 @@ const Header = () => (
     <ul>
       {links.map((link, index) => (
         <li key={index}>
-          <Link
-            href={`/category?name=${encodeURIComponent(link)}`}
-            as={`/category/${slugify(link)}`}
-          >
+          <Link href={`/category?name=${encodeURIComponent(link)}`}>
             <a>{link}</a>
           </Link>
         </li>

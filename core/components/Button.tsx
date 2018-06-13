@@ -1,9 +1,13 @@
 import React from "react";
+import Link from "next/link";
 
-const Button = ({ children }) => {
+const Button = ({ children, href }) => {
   return (
     <span>
-      {children}
+      <Link href={href}>
+        <a>{children}</a>
+      </Link>
+
       <style jsx>{`
         span {
           padding: 12px;
@@ -11,6 +15,10 @@ const Button = ({ children }) => {
           color: white;
           text-transform: uppercase;
           cursor: pointer;
+        }
+        a {
+          color: white;
+          text-decoration: none;
         }
       `}</style>
     </span>

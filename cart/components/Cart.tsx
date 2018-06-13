@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import Button from "@panter/core/components/Button";
 
 class Cart extends Component {
   state = {
@@ -65,8 +64,6 @@ class Cart extends Component {
             ))}
           </tbody>
         </table>
-
-        <Button>Go to checkout</Button>
 
         <style jsx>{`
           div {

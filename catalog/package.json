@@ -12,10 +12,8 @@
   },
   "scripts": {
     "dev": "next",
-    "build-dev": "next build",
-    "start": "next start",
-    "analyze": "BUNDLE_ANALYZE=both yarn build",
-    "deploy": "now --forward-npm --regions bru"
+    "build": "next build",
+    "start": "next start -p 4001"
   },
   "devDependencies": {
     "@types/next": "^2.4.9",

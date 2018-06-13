@@ -1,14 +1,10 @@
 import React from "react";
 import Link from "next/link";
-import slugify from "@panter/core/utils/slugify";
 
 const Product = ({ name, price, image, id }) => {
   return (
     <div>
-      <Link
-        href={`/product?name=${encodeURIComponent(name)}&id=${id}`}
-        as={`/product/${slugify(name)}`}
-      >
+      <Link href={`/product?name=${encodeURIComponent(name)}&id=${id}`}>
         <a>
           <div className="image-wrapper">
             <div className="overlay" />

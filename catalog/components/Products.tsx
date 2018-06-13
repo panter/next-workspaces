@@ -32,7 +32,7 @@ const products = [
 const Products = () => {
   return (
     <div>
-      {products.map(product => <Product {...product} />)}
+      {products.map(product => <Product key={product.id} {...product} />)}
       <style jsx>{`
         div {
           display: flex;

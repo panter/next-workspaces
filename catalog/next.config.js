@@ -14,6 +14,7 @@ const externalNodeModulesRegExp = /node_modules(?!\/@panter(?!.*node_modules))/;
 module.exports = withBundleAnalyzer(
   withTypescript(
     {
+      assetPrefix: "http://localhost:4001",
       webpack: (config, { dev, isServer, defaultLoaders, dir }) => {
         config.resolve.symlinks = false;
         config.externals = config.externals.map(external => {

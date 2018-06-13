@@ -1,0 +1,7 @@
+{
+  "rules": [
+    { "pathname": "/cart", "dest": "http://localhost:4002" },
+    { "pathname": "/checkout", "dest": "http://localhost:4002" },
+    { "pathname": "/**", "dest": "http://localhost:4001" }
+  ]
+}

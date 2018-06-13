@@ -15,6 +15,7 @@ const Layout = ({ children }) => {
 
       <style jsx>{`
         .layout {
+          text-align: center;
           padding: 48px;
         }
       `}</style>
