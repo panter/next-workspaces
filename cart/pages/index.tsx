@@ -1,17 +1,14 @@
 import React from "react";
-import { Components } from "@tomaswitek/core";
-
-const { Header, Footer } = Components;
-// FYI you can also use separate import
-//import Header from "@tomaswitek/core/components/Header";
+import Layout from "@panter/core/components/Layout";
+import Title from "../components/Title";
+import Cart from "../components/Cart";
 
 const index = () => {
   return (
-    <div>
-      <Header />
-      Cart App
-      <Footer />
-    </div>
+    <Layout>
+      <Title>Your Cart</Title>
+      <Cart />
+    </Layout>
   );
 };
 

@@ -5,7 +5,8 @@
   "license": "MIT",
   "private": true,
   "dependencies": {
-    "@tomaswitek/core": "1.0.0",
+    "@panter/core": "1.0.0",
+    "@types/styled-jsx": "^2.2.3",
     "decimal.js": "^10.0.0",
     "next": "^5.1.0",
     "react": "^16.3.1",

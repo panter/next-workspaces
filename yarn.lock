@@ -26,6 +26,12 @@
   dependencies:
     csstype "^2.2.0"
 
+"@types/styled-jsx@^2.2.3":
+  version "2.2.3"
+  resolved "https://registry.yarnpkg.com/@types/styled-jsx/-/styled-jsx-2.2.3.tgz#c97ed7ad8d7b4e6ffbe84e2d4c24a49eb1b9fe54"
+  dependencies:
+    "@types/react" "*"
+
 "@zeit/check-updates@1.1.1":
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/@zeit/check-updates/-/check-updates-1.1.1.tgz#1bee858fd3f9b8633b0fc23dff53cb17343331c0"
