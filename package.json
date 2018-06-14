@@ -10,7 +10,8 @@
   "scripts": {
     "proxy": "micro-proxy -r proxy.json",
     "build": "cd ./checkout && next build && cd ../catalog && next build",
-    "start": "concurrently 'cd ./checkout && yarn start' 'cd ./catalog && yarn start' 'yarn proxy'"
+    "start": "concurrently 'cd ./checkout && yarn start' 'cd ./catalog && yarn start' 'yarn proxy'",
+    "dev": "concurrently 'cd ./checkout && yarn dev' 'cd ./catalog && yarn dev' 'yarn proxy'"
   },
   "devDependencies": {
     "concurrently": "^3.5.1",
